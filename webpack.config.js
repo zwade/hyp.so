@@ -28,7 +28,8 @@ module.exports = {
     },
 
     output: {
-        publicPath: "/",
+        publicPath: "/hyp.so",
+        path: path.resolve(__dirname, "docs"),
     },
 
     module: {
@@ -41,11 +42,14 @@ module.exports = {
                 }]
             },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+
+            process.env.MODE === "production" ? {} :
             {
                 enforce: "pre",
                 test: /\.js$/,
                 loader: "source-map-loader"
             },
+
             {
                 test: /\.s[ac]ss$/i,
                 use: [
