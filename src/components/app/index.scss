@@ -1,0 +1,56 @@
+@use "~/src/vars" as vars;
+
+.app {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+
+    display: grid;
+    grid-template:
+        ". content ." 1fr
+        / 1fr min(100%, 1000px) 1fr;
+
+    background-color: vars.$pastel-blue;
+
+    .content {
+        grid-area: content;
+        z-index: 1;
+    }
+
+    a, .link {
+        font-size: 24px;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        color: vars.$blue;
+
+        &:not(.inverted) {
+            &::after {
+                content: "";
+                border: 2px solid transparent;
+                position: absolute;
+                bottom: -2px;
+                left: 20px;
+                right: 20px;
+                transition: left 100ms ease-in, right 100ms ease-in, border-color 100ms ease-in;
+            }
+
+            &:hover {
+                &::after {
+                    border-bottom: 2px solid currentColor;
+                    left: 0px;
+                    right: 0px;
+                }
+            }
+        }
+
+        &.inverted {
+            background-color: vars.$white;
+            color: vars.$blue;
+            border-radius: 8px;
+            padding: 8px;
+        }
+    }
+
+
+}

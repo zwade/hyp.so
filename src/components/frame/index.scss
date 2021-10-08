@@ -1,0 +1,60 @@
+@use "~/src/vars" as vars;
+
+.frame {
+    position: relative;
+    padding: 64px 0px;
+    display: grid;
+    grid-template:
+        "title   title" max-content
+        "graphic body" max-content
+        / max-content 1fr;
+
+    &[data-flipped=true] {
+        grid-template:
+            "title title" max-content
+            "body  graphic" max-content
+            / 1fr max-content;
+    }
+
+    &[data-dark=true] {
+        color: vars.$pastel-blue;
+
+        &::before {
+            background: vars.$blue;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        background: vars.$pastel-blue;
+        z-index: -1;
+    }
+
+    .frame-header {
+        grid-area: title;
+
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .frame-graphic {
+        grid-area: graphic;
+    }
+
+    .frame-body {
+        grid-area: body;
+
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+
+        padding: 32px;
+    }
+}

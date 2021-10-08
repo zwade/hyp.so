@@ -1,0 +1,35 @@
+@use "~/src/vars" as vars;
+
+.footer {
+    margin-top: 64px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: vars.$blue;
+        z-index: -1;
+    }
+
+    padding: 32px;
+
+    display: grid;
+    grid-template-columns: max-content;
+    grid-auto-rows: max-content;
+    grid-row-gap: 12px;
+
+    justify-content: start;
+    align-items: start;
+    font-size: 12px;
+    color: vars.$white;
+
+    &.footer a {
+        color: vars.$white;
+        font-size: 12px;
+    }
+}

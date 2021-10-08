@@ -1,0 +1,12 @@
+<svg width="96" height="283" viewBox="0 0 96 283" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="80" cy="173" r="16" transform="rotate(-90 80 173)" fill="#FCAD37"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 157C24.8366 157 32 164.163 32 173C32 181.837 24.8366 189 16 189L16 205L80 205L80 141L64 141C64 149.837 56.8366 157 48 157C39.1634 157 32 149.837 32 141L16 141L16 157Z" fill="#FCAD37"/>
+<rect x="16" y="203" width="64" height="32" fill="#FCAD37"/>
+<path d="M50.3048 281.733L79.9998 235H16L48.6407 281.769C49.0493 282.354 49.922 282.336 50.3048 281.733Z" fill="#FFD79C"/>
+<path d="M50.2737 281.733L59 268H39L48.6097 281.769C49.0182 282.354 49.8909 282.336 50.2737 281.733Z" fill="black"/>
+<circle cx="16" cy="80" r="16" fill="#FCAD37"/>
+<circle cx="48" cy="112" r="16" fill="#FCAD37"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M80 48H16L16 112H80V96C71.1634 96 64 88.8366 64 80C64 71.1634 71.1634 64 80 64V48Z" fill="#FCAD37"/>
+<rect x="16" y="24" width="64" height="24" fill="#FCAD37"/>
+<path d="M16 8C16 3.58172 19.5817 0 24 0L72 0C76.4183 0 80 3.58172 80 8V24L16 24L16 8Z" fill="#F75774"/>
+</svg>

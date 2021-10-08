@@ -1,0 +1,50 @@
+@use "~/src/vars.scss" as vars;
+
+.header {
+    position: relative;
+
+    .header-blob {
+        position: absolute;
+        top: 0;
+        right: -150px;
+        z-index: -1;
+
+        display: flex;
+        flex-direction: row;
+        color: vars.$blue;
+
+        &::before {
+            content: "";
+            width: 50vw;
+            background-color: currentColor;
+        }
+    }
+
+    .header-options {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: vars.$white;
+        column-gap: 16px;
+
+        .header-logo {
+            font-size: 72px;
+        }
+
+        .link {
+            font-size: 24px;
+            color: vars.$white;
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+    }
+
+    .tagline {
+        margin-top: 32px;
+        max-width: 320px;
+        color: vars.$white;
+        font-size: 24px;
+    }
+}

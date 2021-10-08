@@ -1,0 +1,28 @@
+@keyframes pencil {
+    0% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+.frame.about-segment {
+    .pencil {
+        transform: rotate(-20deg);
+        margin-right: 32px;
+
+    }
+
+    &[data-visible=true] {
+        .pencil {
+            animation: pencil 2s 1 ease-in-out;
+        }
+    }
+}
+

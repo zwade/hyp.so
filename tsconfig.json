@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "module": "CommonJS",
+        "target": "ES2020",
+        "declaration": true,
+        "incremental": true,
+        "sourceMap": true,
+        "jsx": "react-jsx",
+        "outDir": "dist"
+    },
+    "include": ["src"]
+}
