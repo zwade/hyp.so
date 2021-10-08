@@ -84,7 +84,10 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "./index.html")
+            template: path.resolve(__dirname, "./index.html"),
+            templateParameters: {
+                mode: process.env.MODE ?? "development",
+            }
         }),
         new DefinePlugin({
             "process.env": JSON.stringify({
