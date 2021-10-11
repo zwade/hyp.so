@@ -13,6 +13,11 @@
         flex-direction: row;
         color: vars.$blue;
 
+        @include vars.mobile {
+            height: 200%;
+            width: 200%;
+        }
+
         &::before {
             content: "";
             width: 50vw;
@@ -21,30 +26,77 @@
     }
 
     .header-options {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: grid;
+        grid-template:
+            "logo    links" max-content
+            "tagline ."     max-content
+            / max-content 1fr;
+
+        @include vars.mobile {
+            padding: 32px;
+
+            grid-template:
+                "links links"   max-content
+                "logo    ."    max-content
+                "tagline ." max-content
+                / max-content 1fr;
+        }
+
         color: vars.$white;
-        column-gap: 16px;
 
         .header-logo {
+            grid-area: logo;
             font-size: 72px;
+
+            @include vars.mobile {
+                margin-top: 32px;
+            }
         }
 
-        .link {
-            font-size: 24px;
+        .header-links {
+            grid-area: links;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            column-gap: 16px;
+
+            @include vars.mobile {
+                justify-content: space-around;
+
+                .omit-mobile {
+                    display: none;
+                }
+            }
+
+            .header-link {
+                @include vars.header2;
+                text-decoration: none;
+                color: inherit;
+
+                &:hover {
+                    color: vars.$blue;
+                }
+            }
+
+            .link {
+                @include vars.header2;
+                color: vars.$white;
+            }
+        }
+
+        .tagline {
+            grid-area: tagline;
+            margin-top: 32px;
+            max-width: 320px;
             color: vars.$white;
-        }
+            @include vars.header2;
 
-        .spacer {
-            flex-grow: 1;
+            @include vars.mobile {
+                margin-top: 8px;
+                max-width: 240px;
+            }
         }
-    }
-
-    .tagline {
-        margin-top: 32px;
-        max-width: 320px;
-        color: vars.$white;
-        font-size: 24px;
     }
 }

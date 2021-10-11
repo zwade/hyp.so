@@ -1,4 +1,10 @@
+@use "~/src/vars" as vars;
+
 .hypatia-sample {
+    @include vars.mobile {
+        display: none;
+    }
+
     margin: 128px 0px;
 
     display: flex;

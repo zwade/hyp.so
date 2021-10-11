@@ -10,25 +10,38 @@ import { ShearIn } from "../shear-in";
 import { CallToAction } from "../call-to-action";
 import { Footer } from "../footer";
 
+import { MobileContext } from "./mobile-context";
 import { palette } from "./palette";
 
 import "./index.scss";
 
 export const App = () => {
+    const [appRef, setAppRef] = React.useState<HTMLDivElement | null>(null);
+    const [isMobile, setIsMobile] = React.useState(false);
+
+    React.useEffect(() => {
+        if (!appRef) return;
+
+        const isMobile = getComputedStyle(appRef).getPropertyValue("--is-mobile").trim() === "1";
+        setIsMobile(isMobile);
+    }, [appRef]);
+
     return (
         <PaletteProvider palette={palette}>
-            <div className="app">
-                <div className="content">
-                    <Header/>
-                    <HypatiaSample/>
-                    <SlideIn/>
-                    <TuneYourTraining/>
-                    <ModularByDesign/>
-                    <ShearIn/>
-                    <CallToAction/>
-                    <Footer/>
+            <MobileContext.Provider value={isMobile}>
+                <div className="app" ref={setAppRef}>
+                        <div className="content">
+                        <Header/>
+                        <HypatiaSample/>
+                        <SlideIn/>
+                        <TuneYourTraining/>
+                        <ModularByDesign/>
+                        <ShearIn/>
+                        <CallToAction/>
+                        <Footer/>
+                    </div>
                 </div>
-            </div>
+            </MobileContext.Provider>
         </PaletteProvider>
     )
 }

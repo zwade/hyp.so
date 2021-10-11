@@ -12,13 +12,18 @@
 
     background-color: vars.$pastel-blue;
 
+    --is-mobile: 0;
+    @include vars.mobile {
+        --is-mobile: 1;
+    }
+
     .content {
         grid-area: content;
         z-index: 1;
     }
 
     a, .link {
-        font-size: 24px;
+        @include vars.header2;
         cursor: pointer;
         position: relative;
         text-decoration: none;
@@ -44,7 +49,7 @@
             }
         }
 
-        &.inverted {
+        &.inverted.inverted {
             background-color: vars.$white;
             color: vars.$blue;
             border-radius: 8px;

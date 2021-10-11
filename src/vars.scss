@@ -4,3 +4,26 @@ $pastel-blue: #eef8ff;
 $white: #FFFFFF;
 $slate: #383131;
 $black: #000000;
+
+@mixin mobile() {
+    @media (max-width: 1080px) {
+        @content
+    }
+}
+
+@mixin header1 {
+    font-size: 48px;
+
+    @include mobile {
+        font-size: 32px;
+    }
+}
+
+@mixin header2 {
+    font-size: 24px;
+
+    @include mobile {
+        font-size: 18px;
+    }
+}
+

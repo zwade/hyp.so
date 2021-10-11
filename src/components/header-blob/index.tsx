@@ -6,18 +6,19 @@ export const Header = () => {
     return (
         <div className="header">
             <div className="header-blob">
-                <HeaderSvg />
+                <HeaderSvg/>
             </div>
             <div className="header-options">
                 <div className="header-logo">hypatia</div>
-                <div className="spacer"/>
-                <div className="link">about</div>
-                <div className="link">examples</div>
-                <div className="link">docs</div>
-                <div className="link inverted">try now</div>
-            </div>
-            <div className="tagline">
-                train employees and customers faster
+                <div className="header-links">
+                    <div className="link">about</div>
+                    <div className="link omit-mobile">examples</div>
+                    <div className="link">docs</div>
+                    <div className="link inverted">try now</div>
+                </div>
+                <div className="tagline">
+                    train employees and customers faster
+                </div>
             </div>
         </div>
     );
