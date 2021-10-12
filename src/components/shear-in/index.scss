@@ -7,7 +7,6 @@ $padding: 128px;
 .shear-in {
     display: flex;
     flex-direction: column;
-    height: 512px;
 
     .left, .right {
         opacity: 0;
@@ -16,7 +15,7 @@ $padding: 128px;
         transition: opacity $piston-anim;
 
         .piston {
-            position: absolute;
+            position: relative;
             top: 0;
             bottom: 0;
             padding: 0px $padding;
@@ -34,10 +33,9 @@ $padding: 128px;
     }
 
     .left {
-        flex-basis: 128px;
-
         .piston {
-            right: 256px;
+            transform: translateX(-100%);
+            left: calc(100% - $padding);
             background: vars.$light-blue;
             justify-content: flex-end;
             align-items: center;
@@ -52,11 +50,9 @@ $padding: 128px;
     }
 
     .right {
-        flex-grow: 1;
-
         .piston {
-            left: 256px;
             background: vars.$slate;
+            right: -$padding;
             justify-content: flex-start;
             padding-right: 0px;
 
@@ -73,7 +69,7 @@ $padding: 128px;
             opacity: 1;
 
             .piston {
-                right: -$padding;
+                left: calc(100% + $padding);
             }
         }
 
@@ -81,7 +77,7 @@ $padding: 128px;
             opacity: 1;
 
             .piston {
-                left: -$padding;
+                right: $padding;
             }
         }
     }

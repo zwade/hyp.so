@@ -1,14 +1,14 @@
 .frame.about-segment {
     .pencil {
-        transform: scale(0.8) rotate(-20deg);
-        opacity: 0.75;
+        transform: scale(0.75) rotate(-20deg);
+        opacity: 0;
         margin-right: 32px;
         transition: transform 250ms ease-in, opacity 250ms ease-in;
     }
 
     &[data-visible=true] {
         .pencil {
-            transform: scale(1.2) rotate(-20deg);
+            transform: scale(1) rotate(-20deg);
             opacity: 1;
         }
     }
