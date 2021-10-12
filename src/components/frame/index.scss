@@ -52,8 +52,6 @@
     .frame-body {
         grid-area: body;
 
-        display: flex;
-        flex-direction: column;
         @include vars.header2;
 
         padding: 32px;
