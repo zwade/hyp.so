@@ -21,7 +21,26 @@ const checkboxOptions = [
 
 export const CallToAction = () => {
     const [email, setEmail] = React.useState("");
-    const [selections, setSelections] = React.useState(new Set<Options>());
+    const [interests, setInterests] = React.useState(new Set<Options>());
+    const [done, setDone] = React.useState(false);
+
+    const submit = async () => {
+        const req = await fetch("/interest", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                email,
+                interests: [...interests],
+            }),
+        });
+
+        // The only way we get 404 is if we're local
+        if (req.status === 200 || req.status === 404) {
+            setDone(true);
+        }
+    }
 
     return (
         <Frame
@@ -36,19 +55,29 @@ export const CallToAction = () => {
                 You can also get in touch with us at <a href="mailto:welcome@hyp.so" target="_blank">welcome@hyp.so</a>.
             </div>
             <div className="form">
-                <Input value={email} onChange={setEmail} placeholder="Email Address"/>
-                <div className="rest" data-hidden={email === ""}>
+                {
+                    !done ? (
+                        <Input value={email} onChange={setEmail} placeholder="Email Address"/>
+                    ) : (
+                        <div className="done">
+                            <h2>Thanks!</h2>
+                            <p>We'll be in touch soon.</p>
+                        </div>
+                    )
+                }
+                <div className="rest" data-hidden={email === "" || done}>
                     <div className="spacer"/>
                     <div className="prompt">I'm interested in hypatia because...</div>
                     <Checkbox
                         className="reasons"
                         options={checkboxOptions}
-                        value={selections}
-                        onChange={setSelections}
+                        value={interests}
+                        onChange={setInterests}
                     />
                     <Button
                         disabled={email.length < 4 || !email.includes("@")}
                         label="Submit"
+                        onClick={submit}
                     />
                     <div className="consent">By clicking submit, I agree that it's ok for hyp.so to send me periodic emails.</div>
                 </div>
