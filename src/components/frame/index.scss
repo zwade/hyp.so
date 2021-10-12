@@ -51,9 +51,7 @@
 
     .frame-body {
         grid-area: body;
-
-        @include vars.header2;
-
         padding: 32px;
+        @include vars.header2;
     }
 }
