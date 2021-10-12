@@ -4,7 +4,7 @@ $piston-anim: 500ms ease-in-out 250ms;
 
 .slidein {
     display: flex;
-    height: 512px;
+    height: 412px;
 
     .left, .right {
         flex-grow: 1;
@@ -37,7 +37,7 @@ $piston-anim: 500ms ease-in-out 250ms;
                 top: 160px;
                 width: 400px;
                 @include vars.header2;
-                line-height: 72px;
+                line-height: 48px;
                 white-space: pre;
             }
         }

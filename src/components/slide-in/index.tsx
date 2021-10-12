@@ -4,15 +4,27 @@ import { MobileContext } from "../app/mobile-context";
 
 import "./index.scss";
 
-const leftContent = `run commands within the lesson
-design new content in markdown
-embed apps, quizzes, and more
-integrate with existing LMS`;
+const trim = (str: TemplateStringsArray) =>
+    str
+        .join("")
+        .split("\n")
+        .map((x) => x.trim())
+        .filter((x) => !!x)
+        .join("\n");
 
-const rightContent = `bring your own servers or use ours
-test students’ knowledge
-add new functionality with docker
-run code written by students`
+const leftContent = trim`
+    write content quickly in markdown
+    run scripts within lessons
+    embed apps, quizzes, and more
+    integrate with existing pipelines
+`;
+
+const rightContent = trim`
+    bring your own servers or use ours
+    test students’ knowledge
+    add new functionality with docker
+    evaluate code written by students
+`
 
 export const SlideIn = () => {
     const [divRef, setDivRef] = React.useState<HTMLDivElement | null>(null);

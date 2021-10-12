@@ -1,27 +1,15 @@
-@keyframes pencil {
-    0% {
-        transform: rotate(-20deg);
-    }
-
-    50% {
-        transform: rotate(-10deg);
-    }
-
-    100% {
-        transform: rotate(-20deg);
-    }
-}
-
 .frame.about-segment {
     .pencil {
-        transform: rotate(-20deg);
+        transform: scale(0.8) rotate(-20deg);
+        opacity: 0.75;
         margin-right: 32px;
-
+        transition: transform 250ms ease-in, opacity 250ms ease-in;
     }
 
     &[data-visible=true] {
         .pencil {
-            animation: pencil 2s 1 ease-in-out;
+            transform: scale(1.2) rotate(-20deg);
+            opacity: 1;
         }
     }
 }

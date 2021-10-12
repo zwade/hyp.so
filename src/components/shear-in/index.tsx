@@ -17,14 +17,17 @@ export const ShearIn = () => {
             <div className="right">
                 <div className="piston">
                     <div className="piston-content">
-                        {
-`Look straight through me.
-Look at the nightmare.
-Our past is but a dream that we try to escape,
-try to evade, to erase ourselves.
-Look through me, and see the anthem of our obsession.
-Behold your child: perfection, a rotting shell of atrophy.`
-                        }
+                        <p>
+                            Our vision for better education includes making Hypatia accessible to everyone, not just our customers.
+                            That's why we've adopted a hybrid approach to our software.
+                            Our standalone application, Hypatia Core, will not only be available for everyone to use,
+                            but will be developed in the open with visibility and contributions from the community.
+                        </p>
+                        <p>
+                            Additionally, we are committed to supporting open source learning through our cloud offering, Hypatia Campus.
+                            Any open source lessons made available through Hypatia Campus will be available for anyone to use at no cost
+                            to the student or the teacher.
+                        </p>
                     </div>
                 </div>
             </div>

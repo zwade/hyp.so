@@ -13,9 +13,15 @@ export const TuneYourTraining = () => {
             dark
             flipped
         >
-            All the world was a dream I couldn't shake,
-            In a midnight reverie, of which I'll never wake.
-            That started, mundane enough, with an incessant tapping on the window pane separating me from the storm.
+            <p>
+                <i>One size fits all</i> is not always the best approach for teaching.
+                With Hypatia, you can choose off-the-shelf lessons that fit your company,
+                while also using our rich suite of tools to build the perfect curriculum for your team.
+            </p>
+            <p>
+                Connect internal applications, tools, and frameworks securely to Hypatia to use our cloud learning system,
+                or run our on-premises solution for more control and flexibility.
+            </p>
         </Frame>
     )
 }
