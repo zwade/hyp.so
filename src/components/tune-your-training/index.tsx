@@ -9,6 +9,7 @@ export const TuneYourTraining = () => {
             title="Tune your Training"
             className="tune-segment"
             graphic={<TuningFork className="tuning-fork"/>}
+            id={"tune-your-training"}
             dark
             flipped
         >

@@ -28,7 +28,7 @@ module.exports = {
     },
 
     output: {
-        publicPath: "/hyp.so",
+        publicPath: "/",
         path: path.resolve(__dirname, "docs"),
     },
 

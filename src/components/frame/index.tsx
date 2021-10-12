@@ -9,6 +9,7 @@ export interface Props {
     children: React.ReactNode;
     title: string;
     className?: string;
+    id?: string;
     graphic?: React.ReactNode;
     dark?: boolean;
     flipped?: boolean;
@@ -20,6 +21,7 @@ export const Frame = (props: Props) => {
 
     return (
         <div
+            id={props.id}
             className={`frame ${props.className ?? ""}`}
             data-visible={scrolledTo}
             data-dark={props.dark}

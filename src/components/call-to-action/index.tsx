@@ -27,6 +27,7 @@ export const CallToAction = () => {
         <Frame
             title="Get the Details"
             className="details-segment"
+            id="join-waitlist"
         >
             <div className="details-blurb">
                 Hypatia is still in closed beta, but we're adding new users every week.

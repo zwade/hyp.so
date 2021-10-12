@@ -54,6 +54,11 @@
             color: vars.$blue;
             border-radius: 8px;
             padding: 8px;
+            transition: background-color 100ms ease-in;
+
+            &:hover {
+                background-color: rgba(vars.$white, 0.75);
+            }
         }
     }
 

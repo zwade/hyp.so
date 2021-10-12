@@ -11,10 +11,10 @@ export const Header = () => {
             <div className="header-options">
                 <div className="header-logo">hypatia</div>
                 <div className="header-links">
-                    <div className="link">about</div>
-                    <div className="link omit-mobile">examples</div>
-                    <div className="link">docs</div>
-                    <div className="link inverted">try now</div>
+                    <a className="link" href="#tune-your-training">about</a>
+                    {/* <div className="link omit-mobile">examples</div> */}
+                    <a className="link" href="https://github.com/zwade/hypatia/" target="_blank">docs</a>
+                    <a className="link inverted" href="#join-waitlist">join the waitlist</a>
                 </div>
                 <div className="tagline">
                     train employees and customers faster
