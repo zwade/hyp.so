@@ -12,19 +12,19 @@ const trim = (str: TemplateStringsArray) =>
         .filter((x) => !!x)
         .join("\n");
 
-const leftContent = trim`
-    write content quickly in markdown
-    run scripts within lessons
-    embed apps, quizzes, and more
-    integrate with existing pipelines
-`;
+const leftContent = <>
+    <div>write content quickly in markdown</div>
+    <div>run scripts within lessons</div>
+    <div>embed apps, quizzes, and more</div>
+    <div>integrate with existing pipelines</div>
+</>
 
-const rightContent = trim`
-    bring your own servers or use ours
-    test students’ knowledge
-    add new functionality with docker
-    evaluate code written by students
-`
+const rightContent = <>
+    <div>bring your own servers or use ours</div>
+    <div>test students’ knowledge</div>
+    <div>add new functionality with docker</div>
+    <div>evaluate code written by students</div>
+</>;
 
 export const SlideIn = () => {
     const [divRef, setDivRef] = React.useState<HTMLDivElement | null>(null);
@@ -32,7 +32,7 @@ export const SlideIn = () => {
     const isCombined = useScrolledTo(divRef, 0.66);
 
     return (
-        <div className="slidein" data-combined={isCombined} ref={setDivRef}>
+        <div className="slidein" data-combined={isCombined || !!window.ssr} ref={setDivRef}>
             <div className="left">
                 <div className="piston">
                     <div className="title">Clarity meets Complexity</div>

@@ -23,7 +23,7 @@ export const Frame = (props: Props) => {
         <div
             id={props.id}
             className={`frame ${props.className ?? ""}`}
-            data-visible={scrolledTo}
+            data-visible={scrolledTo || !!window.ssr}
             data-dark={props.dark}
             data-flipped={props.flipped}
             ref={setDivRef}

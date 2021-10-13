@@ -87,7 +87,7 @@ module.exports = {
             : {},
 
     plugins: [
-        new WebpackSSRPlugin(),
+        ...(process.env.MODE === "production" ? [new WebpackSSRPlugin()] : []),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "./index.html"),
             templateParameters: {

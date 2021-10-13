@@ -8,7 +8,7 @@ export const ShearIn = () => {
     const isCombined = useScrolledTo(divRef, 0.75);
 
     return (
-        <div className="shear-in" data-combined={isCombined} ref={setDivRef}>
+        <div className="shear-in" data-combined={isCombined || !!window.ssr} ref={setDivRef}>
             <div className="left">
                 <div className="piston">
                     <div className="piston-content">Embracing Open Source</div>
