@@ -3,6 +3,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { DefinePlugin } = require("webpack");
 const PnpWebpackPlugin = require("pnp-webpack-plugin");
+const copyWebpackPlugin = require("copy-webpack-plugin");
+const { WebpackSSRPlugin } = require("./webpack-ssr");
 
 
 module.exports = {
@@ -30,6 +32,8 @@ module.exports = {
     output: {
         publicPath: "/",
         path: path.resolve(__dirname, "docs"),
+        library: "hypatia",
+        libraryTarget: "umd",
     },
 
     module: {
@@ -83,6 +87,7 @@ module.exports = {
             : {},
 
     plugins: [
+        new WebpackSSRPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "./index.html"),
             templateParameters: {
@@ -94,6 +99,11 @@ module.exports = {
                 MODE: process.env.MODE ?? "development",
                 TRUST: process.env.TRUST ?? "0"
             }),
+        }),
+        new copyWebpackPlugin({
+            patterns: [
+                { from: "./src/favicon", to: "./favicon" },
+            ]
         })
     ],
 };

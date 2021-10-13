@@ -22,7 +22,12 @@ export const App = () => {
     React.useEffect(() => {
         if (!appRef) return;
 
-        const isMobile = getComputedStyle(appRef).getPropertyValue("--is-mobile").trim() === "1";
+        const isMobileVar =
+            getComputedStyle(appRef)
+                .getPropertyValue("--is-mobile")
+                .trim();
+        const isMobile = isMobileVar === "1";
+
         setIsMobile(isMobile);
     }, [appRef]);
 

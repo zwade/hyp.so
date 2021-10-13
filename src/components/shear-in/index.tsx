@@ -20,8 +20,8 @@ export const ShearIn = () => {
                         <p>
                             Our vision for better education includes making Hypatia accessible to everyone, not just our customers.
                             That's why we've adopted a hybrid approach to our software.
-                            Our standalone application, Hypatia Core, will not only be available for everyone to use,
-                            but will be developed in the open with visibility and contributions from the community.
+                            Our standalone application, Hypatia Core, will be available for everyone to use,
+                            and be developed in the open with visibility and contributions from the community.
                         </p>
                         <p>
                             Additionally, we are committed to supporting open source learning through our cloud offering, Hypatia Campus.

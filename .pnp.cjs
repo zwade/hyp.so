@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.9"],
             ["@types/sass", "npm:1.16.1"],
             ["@types/webpack-dev-server", "npm:4.3.0"],
+            ["copy-webpack-plugin", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:9.0.1"],
             ["css-loader", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:6.3.0"],
             ["html-webpack-plugin", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:5.3.2"],
             ["pnp-webpack-plugin", "npm:1.7.0"],
@@ -3961,6 +3962,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["copy-webpack-plugin", [
+        ["npm:9.0.1", {
+          "packageLocation": "./.yarn/cache/copy-webpack-plugin-npm-9.0.1-e94a7db1b5-f3e69883e1.zip/node_modules/copy-webpack-plugin/",
+          "packageDependencies": [
+            ["copy-webpack-plugin", "npm:9.0.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:9.0.1", {
+          "packageLocation": "./.yarn/__virtual__/copy-webpack-plugin-virtual-6e40a3dfab/0/cache/copy-webpack-plugin-npm-9.0.1-e94a7db1b5-f3e69883e1.zip/node_modules/copy-webpack-plugin/",
+          "packageDependencies": [
+            ["copy-webpack-plugin", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:9.0.1"],
+            ["@types/webpack", null],
+            ["fast-glob", "npm:3.2.7"],
+            ["glob-parent", "npm:6.0.2"],
+            ["globby", "npm:11.0.4"],
+            ["normalize-path", "npm:3.0.0"],
+            ["p-limit", "npm:3.1.0"],
+            ["schema-utils", "npm:3.1.1"],
+            ["serialize-javascript", "npm:6.0.0"],
+            ["webpack", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:5.57.1"]
+          ],
+          "packagePeers": [
+            "@types/webpack",
+            "webpack"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["core-js-compat", [
         ["npm:3.18.2", {
           "packageLocation": "./.yarn/cache/core-js-compat-npm-3.18.2-0aac8eebb7-8358d4a147.zip/node_modules/core-js-compat/",
@@ -5012,6 +5042,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["is-glob", "npm:4.0.3"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:6.0.2", {
+          "packageLocation": "./.yarn/cache/glob-parent-npm-6.0.2-2cbef12738-c13ee97978.zip/node_modules/glob-parent/",
+          "packageDependencies": [
+            ["glob-parent", "npm:6.0.2"],
+            ["is-glob", "npm:4.0.3"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["glob-to-regexp", [
@@ -5357,6 +5395,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.9"],
             ["@types/sass", "npm:1.16.1"],
             ["@types/webpack-dev-server", "npm:4.3.0"],
+            ["copy-webpack-plugin", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:9.0.1"],
             ["css-loader", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:6.3.0"],
             ["html-webpack-plugin", "virtual:17d4e650580cebeaac96ccf53e89fc77930c078a865e3d5d3a99f38baf8405b044caf0766a393934075c8c80b6e42912ddafa1fff176c707c26ed9f2b681dc74#npm:5.3.2"],
             ["pnp-webpack-plugin", "npm:1.7.0"],

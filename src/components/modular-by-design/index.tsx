@@ -18,7 +18,7 @@ export const ModularByDesign = () => {
             </p>
             <p>
                 Hypatia even allows you to bring your own applications into the classroom with our hybrid cloud and on-prem approach.
-                With Hypatia, you can easily build lessons that integrate seemlessly into your needs and infrastructure.
+                With Hypatia, you can easily build lessons that integrate seamlessly into your needs and infrastructure.
             </p>
         </Frame>
     )

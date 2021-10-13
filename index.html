@@ -1,6 +1,20 @@
-<html>
+<html lang="en">
     <head>
-        <title></title>
+        <title>hypatia</title>
+
+        <meta name="theme-color" content="#1C7EF0">
+        <meta name="application-name" content="hypatia">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="hypatia is a learning management system for modern technology stacks" />
+
+        <link rel="shortcut icon" href="/favicon/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="/favicon/favicon-128.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="/favicon/favicon-256.png">
+
+        <meta name="apple-mobile-web-app-title" content="hypatia">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -25,10 +39,11 @@ body, input, text-area {
     min-height: 100vh;
 }
         </style>
+        <%= compilation.ssr?.headContents %>
     </head>
     <body>
         <div id="root">
-
+            <%= compilation.ssr?.bodyContents %>
         </div>
     </body>
 </html>

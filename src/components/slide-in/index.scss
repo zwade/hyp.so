@@ -1,6 +1,6 @@
 @use "~/src/vars.scss" as vars;
 
-$piston-anim: 500ms ease-in-out 250ms;
+$piston-anim: 500ms ease-in-out 100ms;
 
 .slidein {
     display: flex;
