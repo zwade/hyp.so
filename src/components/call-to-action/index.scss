@@ -19,6 +19,10 @@
                 @include vars.header2;
             }
 
+            .bh-input {
+                display: flex;
+            }
+
             @include vars.mobile {
                 .bh-input {
                     min-width: 80px;
