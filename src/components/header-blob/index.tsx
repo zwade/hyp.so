@@ -13,7 +13,7 @@ export const Header = () => {
                 <div className="header-links">
                     <a className="link" href="#tune-your-training">about</a>
                     {/* <div className="link omit-mobile">examples</div> */}
-                    <a className="link" href="https://github.com/zwade/hypatia/" target="_blank">docs</a>
+                    <a className="link" rel="noreferrer" href="https://github.com/zwade/hypatia/" target="_blank">docs</a>
                     <a className="link inverted" href="#join-waitlist">join the waitlist</a>
                 </div>
                 <div className="tagline">

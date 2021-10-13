@@ -52,7 +52,7 @@ export const CallToAction = () => {
                 Hypatia is still in closed beta, but we're adding new users every week.
                 To get more information about the product, and join the waitlist to get in,
                 Please fill out this quick form.
-                You can also get in touch with us at <a href="mailto:welcome@hyp.so" target="_blank">welcome@hyp.so</a>.
+                You can also get in touch with us at <a rel="noreferrer" href="mailto:welcome@hyp.so" target="_blank">welcome@hyp.so</a>.
             </div>
             <div className="form">
                 {
